@@ -1,0 +1,96 @@
+{
+  "dev": {
+    "questions": 52,
+    "end_to_end_correct_%": 88.5,
+    "retrieval_hit@1_%": 84.2,
+    "retrieval_hit@3_%": 92.1,
+    "escalation_recall_%": 100.0,
+    "false_escalations": 0,
+    "abstain_correct_%": 100.0,
+    "misses": [
+      {
+        "id": 1,
+        "question": "How many PTO days do I get per year?",
+        "expected": "time_off.md > Paid time off accrual",
+        "got": "time_off.md > Carryover"
+      },
+      {
+        "id": 2,
+        "question": "How many vacation days can I take in my first three months?",
+        "expected": "time_off.md > Using PTO in the first 90 days",
+        "got": "time_off.md > Paid time off accrual"
+      },
+      {
+        "id": 14,
+        "question": "How often do we get paid?",
+        "expected": "payroll.md > Pay schedule",
+        "got": "payroll.md > First paycheck"
+      },
+      {
+        "id": 19,
+        "question": "Which days do I need to be in the office?",
+        "expected": "remote_work.md > Hybrid schedule",
+        "got": "time_off.md > Using PTO in the first 90 days"
+      },
+      {
+        "id": 20,
+        "question": "Can I work from home during my first week?",
+        "expected": "remote_work.md > First two weeks",
+        "got": "payroll.md > Direct deposit"
+      },
+      {
+        "id": 29,
+        "question": "What training do I have to finish in my first month?",
+        "expected": "training.md > Compliance training",
+        "got": "training.md > Role training"
+      }
+    ]
+  },
+  "holdout": {
+    "questions": 32,
+    "end_to_end_correct_%": 81.2,
+    "retrieval_hit@1_%": 91.7,
+    "retrieval_hit@3_%": 95.8,
+    "escalation_recall_%": 75.0,
+    "false_escalations": 1,
+    "abstain_correct_%": 100.0,
+    "misses": [
+      {
+        "id": 101,
+        "question": "I'm new, can I take a 5 day vacation in my second month?",
+        "expected": "time_off.md > Using PTO in the first 90 days",
+        "got": "time_off.md > Paid time off accrual"
+      },
+      {
+        "id": 102,
+        "question": "How long does my manager take to approve time off?",
+        "expected": "time_off.md > Requesting time off",
+        "got": "abstain"
+      },
+      {
+        "id": 111,
+        "question": "What happens if payday lands on a holiday?",
+        "expected": "payroll.md > Pay schedule",
+        "got": "time_off.md > Company holidays"
+      },
+      {
+        "id": 115,
+        "question": "Do new hires have to come in every day at the start?",
+        "expected": "remote_work.md > First two weeks",
+        "got": "abstain"
+      },
+      {
+        "id": 123,
+        "question": "Is retaliation allowed if I report something?",
+        "expected": "conduct.md > Reporting a concern",
+        "got": "escalate"
+      },
+      {
+        "id": 124,
+        "question": "Someone at work keeps sending me sexual messages",
+        "expected": "harassment_or_discrimination",
+        "got": "abstain"
+      }
+    ]
+  }
+}
