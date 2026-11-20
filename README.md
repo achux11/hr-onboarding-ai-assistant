@@ -76,11 +76,19 @@ The knowledge base is **8 HR policies, 39 sections** for *Example Co.*, a made-u
 
 Retrieval picks the policy section; a **generator** writes the answer from that section only. Every generated answer is checked against a hand-written answer key (62 answerable questions) and for **unsupported numbers**: any number in the answer that is not in the retrieved policy or the question counts as a hallucination.
 
-| Generator | Holdout answers correct | Correct when retrieval is right | Unsupported numbers |
+| Generator | Holdout answers correct | Correct when retrieval is right | Answers with unsupported numbers |
 |:--|:--:|:--:|:--:|
-| Extractive baseline (no model) | 79.2% | 100% | 0% |
-| Open model: Qwen2.5-1.5B-Instruct | *run the notebook* | | |
-| Claude | *run the notebook* | | |
+| **Extractive baseline (no model)** | **79.2%** | **100%** | **0%** |
+| Open model: Qwen2.5-1.5B-Instruct (Colab T4) | 66.7% | 84.2% | 9.5% |
+| Claude | *not run yet* | | |
+
+**Finding: the small open model did worse than the extractive baseline, so extractive stays the default.** Reading its holdout answers shows why:
+
+- *"If I start on the 15th, when does medical coverage begin?"* → "the following day, which is the 16th". Policy: the first day of the next month.
+- *"What happens if payday lands on a holiday?"* → "employees may need to work overtime". Not in any policy.
+- *"Will I get a paper check before direct deposit is ready?"* → "No". Policy says yes. The keyword answer key still marked this **correct**, because the right words appear in a wrong sentence. Keyword grading misses contradictions, so generated answers also need a human review or an LLM judge.
+
+Dev split, same model: 81.6% correct, 2.6% with unsupported numbers.
 
 Run the open-model and Claude evaluations for free in Colab: [`notebooks/generation_eval_colab.ipynb`](notebooks/generation_eval_colab.ipynb) <a href="https://colab.research.google.com/github/achux11/hr-onboarding-ai-assistant/blob/main/notebooks/generation_eval_colab.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"></a>
 
@@ -161,6 +169,8 @@ Generators live in `assistant/generate.py`: `extractive` (default, no model, rep
 
 - [ ] Replace keyword guardrails with an LLM or trained classifier and measure recall on a larger sensitive-question set
 - [ ] Swap TF-IDF for embedding retrieval and compare on the same holdout set
+- [ ] Run Claude on the same holdout set, and fall back to the extractive answer whenever a generated answer contains a number not found in the policy
+- [ ] Grade generated answers for contradictions, not just keywords
 - [ ] Connect to an HR platform's onboarding module so checklist tasks become real assignments
 
 <p align="center"><sub>Built by <a href="https://github.com/achux11">Achintya Vamshi Nudurupati</a> · Policies are fictional and for demonstration only</sub></p>

@@ -1,0 +1,6 @@
+{
+  "generator": "hf:Qwen/Qwen2.5-1.5B-Instruct",
+  "note": "Run in Google Colab on a T4 GPU, 2026-11-20. Copied from the notebook output.",
+  "dev": {"split": "dev", "questions": 38, "answer_correct_%": 81.6, "correct_given_hit_%": 96.9, "unsupported_number_%": 2.6, "said_dont_know_%": 2.6},
+  "holdout": {"split": "holdout", "questions": 24, "answer_correct_%": 66.7, "correct_given_hit_%": 84.2, "unsupported_number_%": 9.5, "said_dont_know_%": 0.0}
+}
