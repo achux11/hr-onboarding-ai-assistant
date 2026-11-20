@@ -1,0 +1,19 @@
+{
+  "generator": "extractive",
+  "dev": {
+    "split": "dev",
+    "questions": 38,
+    "answer_correct_%": 84.2,
+    "correct_given_hit_%": 100.0,
+    "unsupported_number_%": 0.0,
+    "said_dont_know_%": 0.0
+  },
+  "holdout": {
+    "split": "holdout",
+    "questions": 24,
+    "answer_correct_%": 79.2,
+    "correct_given_hit_%": 100.0,
+    "unsupported_number_%": 0.0,
+    "said_dont_know_%": 0.0
+  }
+}

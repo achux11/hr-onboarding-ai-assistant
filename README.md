@@ -6,7 +6,7 @@
   <a href="https://github.com/achux11/hr-onboarding-ai-assistant/actions/workflows/ci.yml"><img src="https://github.com/achux11/hr-onboarding-ai-assistant/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/python-3.11-3776AB?logo=python&logoColor=white" alt="Python 3.11">
   <img src="https://img.shields.io/badge/RAG-scikit--learn-F7931E?logo=scikitlearn&logoColor=white" alt="RAG with scikit-learn">
-  <img src="https://img.shields.io/badge/tests-8%20passing-2ea44f" alt="8 tests passing">
+  <img src="https://img.shields.io/badge/tests-10%20passing-2ea44f" alt="8 tests passing">
   <img src="https://img.shields.io/badge/LLM-Claude%20(optional)-D97757" alt="Claude optional">
 </p>
 
@@ -72,6 +72,18 @@ The knowledge base is **8 HR policies, 39 sections** for *Example Co.*, a made-u
 
 > Baseline before tuning: **65.4%** end-to-end on the first dev half. Tuning added a short HR synonym list ("vacation" means PTO, "baby" means a qualifying life event) and an abstain rule: if a question only matches words that appear in many policies, like *office* or *work*, the assistant declines.
 
+### ✍️ Answer generation
+
+Retrieval picks the policy section; a **generator** writes the answer from that section only. Every generated answer is checked against a hand-written answer key (62 answerable questions) and for **unsupported numbers**: any number in the answer that is not in the retrieved policy or the question counts as a hallucination.
+
+| Generator | Holdout answers correct | Correct when retrieval is right | Unsupported numbers |
+|:--|:--:|:--:|:--:|
+| Extractive baseline (no model) | 79.2% | 100% | 0% |
+| Open model: Qwen2.5-1.5B-Instruct | *run the notebook* | | |
+| Claude | *run the notebook* | | |
+
+Run the open-model and Claude evaluations for free in Colab: [`notebooks/generation_eval_colab.ipynb`](notebooks/generation_eval_colab.ipynb) <a href="https://colab.research.google.com/github/achux11/hr-onboarding-ai-assistant/blob/main/notebooks/generation_eval_colab.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"></a>
+
 <details>
 <summary><b>⚠️ Known misses on the holdout set (left as found)</b></summary>
 
@@ -122,11 +134,12 @@ pip install -r requirements.txt
 python -m assistant "When does my health insurance start?"
 python -m assistant "Give me my onboarding checklist"
 
-python -m eval.run_eval   # dev + holdout report → eval/results.json
-pytest -q                 # 8 tests, including a quality floor on the dev set
+python -m eval.run_eval   # routing + retrieval report → eval/results.json
+python -m eval.run_generation_eval --backend extractive   # answer quality
+pytest -q                 # 10 tests, including a quality floor on the dev set
 ```
 
-By default, answers are the most relevant sentences from the cited policy section, so results are repeatable. With `ANTHROPIC_API_KEY` set and `use_llm=True`, Claude rewrites the answer using **only** the retrieved policy text. The results above use the default mode.
+Generators live in `assistant/generate.py`: `extractive` (default, no model, repeatable), `hf` (any open instruct model through Hugging Face transformers) and `claude` (needs `ANTHROPIC_API_KEY`). All three get the same instruction: answer only from the retrieved policy, keep exact numbers, and say "I don't know, please ask HR" when the policy does not cover the question.
 
 ## 🧱 Project structure
 
@@ -137,8 +150,10 @@ By default, answers are the most relevant sentences from the cited policy sectio
 │   ├── retriever.py     section-level TF-IDF retrieval, HR synonyms, generic-word check
 │   ├── guardrails.py    sensitive-topic categories that always go to a person
 │   ├── checklist.py     dated onboarding plan by scope item
+│   ├── generate.py      answer generators: extractive, open model, Claude
 │   └── agent.py         routes each question, returns cited responses
-├── eval/            84 labeled questions, dev/holdout split, evaluation script
+├── eval/            84 labeled questions with answer keys, routing and generation evaluations
+├── notebooks/       Colab notebook for the open-model and Claude generation runs
 └── tests/           pytest suite, run on every push by GitHub Actions
 ```
 

@@ -1,41 +1,41 @@
-{"id": 1, "question": "How many PTO days do I get per year?", "route": "answer", "expected": "time_off.md > Paid time off accrual", "split": "dev"}
-{"id": 2, "question": "How many vacation days can I take in my first three months?", "route": "answer", "expected": "time_off.md > Using PTO in the first 90 days", "split": "dev"}
-{"id": 3, "question": "How far in advance should I request a week off?", "route": "answer", "expected": "time_off.md > Requesting time off", "split": "dev"}
-{"id": 4, "question": "Do unused vacation days roll over to next year?", "route": "answer", "expected": "time_off.md > Carryover", "split": "dev"}
-{"id": 5, "question": "How many sick days do I get?", "route": "answer", "expected": "time_off.md > Sick leave", "split": "dev"}
-{"id": 6, "question": "How many paid holidays does the company have?", "route": "answer", "expected": "time_off.md > Company holidays", "split": "dev"}
-{"id": 7, "question": "What is the deadline to sign up for benefits?", "route": "answer", "expected": "benefits.md > Enrollment deadline", "split": "dev"}
-{"id": 8, "question": "When does my health insurance start?", "route": "answer", "expected": "benefits.md > Coverage start date", "split": "dev"}
-{"id": 9, "question": "What medical plans can I choose from?", "route": "answer", "expected": "benefits.md > Medical plans", "split": "dev"}
-{"id": 10, "question": "Does the company put money in my HSA?", "route": "answer", "expected": "benefits.md > Medical plans", "split": "dev"}
-{"id": 11, "question": "Can I add my spouse to dental coverage?", "route": "answer", "expected": "benefits.md > Dental and vision", "split": "dev"}
-{"id": 12, "question": "What is the 401k match?", "route": "answer", "expected": "benefits.md > Retirement plan", "split": "dev"}
-{"id": 13, "question": "I just had a baby, can I change my benefits?", "route": "answer", "expected": "benefits.md > Qualifying life events", "split": "dev"}
-{"id": 14, "question": "How often do we get paid?", "route": "answer", "expected": "payroll.md > Pay schedule", "split": "dev"}
-{"id": 15, "question": "When will I get my first paycheck?", "route": "answer", "expected": "payroll.md > First paycheck", "split": "dev"}
-{"id": 16, "question": "How do I set up direct deposit?", "route": "answer", "expected": "payroll.md > Direct deposit", "split": "dev"}
-{"id": 17, "question": "Where do I fill out my W-4?", "route": "answer", "expected": "payroll.md > Tax forms", "split": "dev"}
-{"id": 18, "question": "Where can I find my pay stubs?", "route": "answer", "expected": "payroll.md > Pay stubs", "split": "dev"}
-{"id": 19, "question": "Which days do I need to be in the office?", "route": "answer", "expected": "remote_work.md > Hybrid schedule", "split": "dev"}
-{"id": 20, "question": "Can I work from home during my first week?", "route": "answer", "expected": "remote_work.md > First two weeks", "split": "dev"}
-{"id": 21, "question": "Can I switch to a fully remote role?", "route": "answer", "expected": "remote_work.md > Fully remote roles", "split": "dev"}
-{"id": 22, "question": "Is there a stipend for my home office?", "route": "answer", "expected": "remote_work.md > Home office stipend", "split": "dev"}
-{"id": 23, "question": "Can I work from India for two weeks?", "route": "answer", "expected": "remote_work.md > Working from another country", "split": "dev"}
-{"id": 24, "question": "When will I get my laptop?", "route": "answer", "expected": "it_equipment.md > Laptop", "split": "dev"}
-{"id": 25, "question": "How do I get my email login?", "route": "answer", "expected": "it_equipment.md > Accounts and login", "split": "dev"}
-{"id": 26, "question": "Do I need to set up MFA?", "route": "answer", "expected": "it_equipment.md > Multi-factor authentication", "split": "dev"}
-{"id": 27, "question": "I lost my work laptop, what should I do?", "route": "answer", "expected": "it_equipment.md > Lost or stolen equipment", "split": "dev"}
-{"id": 28, "question": "How do I request new software?", "route": "answer", "expected": "it_equipment.md > Software requests", "split": "dev"}
-{"id": 29, "question": "What training do I have to finish in my first month?", "route": "answer", "expected": "training.md > Compliance training", "split": "dev"}
-{"id": 30, "question": "Who assigns my role training?", "route": "answer", "expected": "training.md > Role training", "split": "dev"}
-{"id": 31, "question": "Will I have a buddy to help me?", "route": "answer", "expected": "training.md > Onboarding buddy", "split": "dev"}
-{"id": 32, "question": "When are my check-ins with my manager?", "route": "answer", "expected": "training.md > 30-60-90 day check-ins", "split": "dev"}
-{"id": 33, "question": "How long do I have to submit an expense?", "route": "answer", "expected": "expenses.md > Submitting expenses", "split": "dev"}
-{"id": 34, "question": "When will I be reimbursed for expenses?", "route": "answer", "expected": "expenses.md > Approval and reimbursement", "split": "dev"}
-{"id": 35, "question": "What is the meal limit when traveling?", "route": "answer", "expected": "expenses.md > Meals during travel", "split": "dev"}
-{"id": 36, "question": "How do I book a flight for a work trip?", "route": "answer", "expected": "expenses.md > Booking travel", "split": "dev"}
-{"id": 37, "question": "What should I wear to the office?", "route": "answer", "expected": "conduct.md > Dress code", "split": "dev"}
-{"id": 38, "question": "How do I report a concern anonymously?", "route": "answer", "expected": "conduct.md > Reporting a concern", "split": "dev"}
+{"id": 1, "question": "How many PTO days do I get per year?", "route": "answer", "expected": "time_off.md > Paid time off accrual", "split": "dev", "answer_key": [["15 days", "15 paid", "fifteen"]]}
+{"id": 2, "question": "How many vacation days can I take in my first three months?", "route": "answer", "expected": "time_off.md > Using PTO in the first 90 days", "split": "dev", "answer_key": [["3 days", "three days"]]}
+{"id": 3, "question": "How far in advance should I request a week off?", "route": "answer", "expected": "time_off.md > Requesting time off", "split": "dev", "answer_key": [["2 weeks", "two weeks"]]}
+{"id": 4, "question": "Do unused vacation days roll over to next year?", "route": "answer", "expected": "time_off.md > Carryover", "split": "dev", "answer_key": [["5", "five"]]}
+{"id": 5, "question": "How many sick days do I get?", "route": "answer", "expected": "time_off.md > Sick leave", "split": "dev", "answer_key": [["6", "six"]]}
+{"id": 6, "question": "How many paid holidays does the company have?", "route": "answer", "expected": "time_off.md > Company holidays", "split": "dev", "answer_key": [["10", "ten"]]}
+{"id": 7, "question": "What is the deadline to sign up for benefits?", "route": "answer", "expected": "benefits.md > Enrollment deadline", "split": "dev", "answer_key": [["30 days", "30-day", "thirty days"]]}
+{"id": 8, "question": "When does my health insurance start?", "route": "answer", "expected": "benefits.md > Coverage start date", "split": "dev", "answer_key": [["first day of the month", "1st of the month", "first of the month"]]}
+{"id": 9, "question": "What medical plans can I choose from?", "route": "answer", "expected": "benefits.md > Medical plans", "split": "dev", "answer_key": [["ppo"], ["hdhp", "high-deductible", "high deductible"]]}
+{"id": 10, "question": "Does the company put money in my HSA?", "route": "answer", "expected": "benefits.md > Medical plans", "split": "dev", "answer_key": [["500"]]}
+{"id": 11, "question": "Can I add my spouse to dental coverage?", "route": "answer", "expected": "benefits.md > Dental and vision", "split": "dev", "answer_key": [["spouse", "partner"]]}
+{"id": 12, "question": "What is the 401k match?", "route": "answer", "expected": "benefits.md > Retirement plan", "split": "dev", "answer_key": [["4"]]}
+{"id": 13, "question": "I just had a baby, can I change my benefits?", "route": "answer", "expected": "benefits.md > Qualifying life events", "split": "dev", "answer_key": [["30 days", "thirty days"]]}
+{"id": 14, "question": "How often do we get paid?", "route": "answer", "expected": "payroll.md > Pay schedule", "split": "dev", "answer_key": [["two weeks", "2 weeks", "biweekly", "bi-weekly", "every other"]]}
+{"id": 15, "question": "When will I get my first paycheck?", "route": "answer", "expected": "payroll.md > First paycheck", "split": "dev", "answer_key": [["2 to 4 weeks", "2-4 weeks", "two to four weeks", "full pay period"]]}
+{"id": 16, "question": "How do I set up direct deposit?", "route": "answer", "expected": "payroll.md > Direct deposit", "split": "dev", "answer_key": [["hr system"]]}
+{"id": 17, "question": "Where do I fill out my W-4?", "route": "answer", "expected": "payroll.md > Tax forms", "split": "dev", "answer_key": [["hr system"]]}
+{"id": 18, "question": "Where can I find my pay stubs?", "route": "answer", "expected": "payroll.md > Pay stubs", "split": "dev", "answer_key": [["hr system"]]}
+{"id": 19, "question": "Which days do I need to be in the office?", "route": "answer", "expected": "remote_work.md > Hybrid schedule", "split": "dev", "answer_key": [["tuesday"], ["wednesday"], ["thursday"]]}
+{"id": 20, "question": "Can I work from home during my first week?", "route": "answer", "expected": "remote_work.md > First two weeks", "split": "dev", "answer_key": [["two weeks", "2 weeks", "first two", "every day"]]}
+{"id": 21, "question": "Can I switch to a fully remote role?", "route": "answer", "expected": "remote_work.md > Fully remote roles", "split": "dev", "answer_key": [["manager"], ["hr"]]}
+{"id": 22, "question": "Is there a stipend for my home office?", "route": "answer", "expected": "remote_work.md > Home office stipend", "split": "dev", "answer_key": [["300"]]}
+{"id": 23, "question": "Can I work from India for two weeks?", "route": "answer", "expected": "remote_work.md > Working from another country", "split": "dev", "answer_key": [["approval", "approve"]]}
+{"id": 24, "question": "When will I get my laptop?", "route": "answer", "expected": "it_equipment.md > Laptop", "split": "dev", "answer_key": [["day one", "first day", "3 business days"]]}
+{"id": 25, "question": "How do I get my email login?", "route": "answer", "expected": "it_equipment.md > Accounts and login", "split": "dev", "answer_key": [["personal email"]]}
+{"id": 26, "question": "Do I need to set up MFA?", "route": "answer", "expected": "it_equipment.md > Multi-factor authentication", "split": "dev", "answer_key": [["first day", "day one"]]}
+{"id": 27, "question": "I lost my work laptop, what should I do?", "route": "answer", "expected": "it_equipment.md > Lost or stolen equipment", "split": "dev", "answer_key": [["24 hours"]]}
+{"id": 28, "question": "How do I request new software?", "route": "answer", "expected": "it_equipment.md > Software requests", "split": "dev", "answer_key": [["it service portal", "service portal"]]}
+{"id": 29, "question": "What training do I have to finish in my first month?", "route": "answer", "expected": "training.md > Compliance training", "split": "dev", "answer_key": [["security"], ["privacy"], ["conduct"]]}
+{"id": 30, "question": "Who assigns my role training?", "route": "answer", "expected": "training.md > Role training", "split": "dev", "answer_key": [["manager"]]}
+{"id": 31, "question": "Will I have a buddy to help me?", "route": "answer", "expected": "training.md > Onboarding buddy", "split": "dev", "answer_key": [["buddy"]]}
+{"id": 32, "question": "When are my check-ins with my manager?", "route": "answer", "expected": "training.md > 30-60-90 day check-ins", "split": "dev", "answer_key": [["30"], ["60"], ["90"]]}
+{"id": 33, "question": "How long do I have to submit an expense?", "route": "answer", "expected": "expenses.md > Submitting expenses", "split": "dev", "answer_key": [["30 days", "thirty days"]]}
+{"id": 34, "question": "When will I be reimbursed for expenses?", "route": "answer", "expected": "expenses.md > Approval and reimbursement", "split": "dev", "answer_key": [["next payroll", "next pay"]]}
+{"id": 35, "question": "What is the meal limit when traveling?", "route": "answer", "expected": "expenses.md > Meals during travel", "split": "dev", "answer_key": [["75"]]}
+{"id": 36, "question": "How do I book a flight for a work trip?", "route": "answer", "expected": "expenses.md > Booking travel", "split": "dev", "answer_key": [["travel portal"]]}
+{"id": 37, "question": "What should I wear to the office?", "route": "answer", "expected": "conduct.md > Dress code", "split": "dev", "answer_key": [["business casual"]]}
+{"id": 38, "question": "How do I report a concern anonymously?", "route": "answer", "expected": "conduct.md > Reporting a concern", "split": "dev", "answer_key": [["ethics hotline", "hotline"]]}
 {"id": 39, "question": "My manager keeps yelling at me and I feel unsafe", "route": "escalate", "expected": "harassment_or_discrimination", "split": "dev"}
 {"id": 40, "question": "A coworker made racist comments to me", "route": "escalate", "expected": "harassment_or_discrimination", "split": "dev"}
 {"id": 41, "question": "I need an accommodation for my disability", "route": "escalate", "expected": "medical_or_accommodation", "split": "dev"}
@@ -50,30 +50,30 @@
 {"id": 50, "question": "Does the cafeteria serve lunch?", "route": "abstain", "expected": null, "split": "dev"}
 {"id": 51, "question": "What is the company stock price?", "route": "abstain", "expected": null, "split": "dev"}
 {"id": 52, "question": "Can I bring my dog to work?", "route": "abstain", "expected": null, "split": "dev"}
-{"id": 100, "question": "What's the PTO accrual rate each month?", "route": "answer", "expected": "time_off.md > Paid time off accrual", "split": "holdout"}
-{"id": 101, "question": "I'm new, can I take a 5 day vacation in my second month?", "route": "answer", "expected": "time_off.md > Using PTO in the first 90 days", "split": "holdout"}
-{"id": 102, "question": "How long does my manager take to approve time off?", "route": "answer", "expected": "time_off.md > Requesting time off", "split": "holdout"}
-{"id": 103, "question": "Will my leftover PTO expire in December?", "route": "answer", "expected": "time_off.md > Carryover", "split": "holdout"}
-{"id": 104, "question": "Do I need to give notice before using a sick day?", "route": "answer", "expected": "time_off.md > Sick leave", "split": "holdout"}
-{"id": 105, "question": "Where is the holiday calendar published?", "route": "answer", "expected": "time_off.md > Company holidays", "split": "holdout"}
-{"id": 106, "question": "I missed the 30 day benefits window, what now?", "route": "answer", "expected": "benefits.md > Enrollment deadline", "split": "holdout"}
-{"id": 107, "question": "If I start on the 15th, when does medical coverage begin?", "route": "answer", "expected": "benefits.md > Coverage start date", "split": "holdout"}
-{"id": 108, "question": "Is there a high deductible plan option?", "route": "answer", "expected": "benefits.md > Medical plans", "split": "holdout"}
-{"id": 109, "question": "Does the 401(k) match vest right away?", "route": "answer", "expected": "benefits.md > Retirement plan", "split": "holdout"}
-{"id": 110, "question": "I got married, how long do I have to update my benefits?", "route": "answer", "expected": "benefits.md > Qualifying life events", "split": "holdout"}
-{"id": 111, "question": "What happens if payday lands on a holiday?", "route": "answer", "expected": "payroll.md > Pay schedule", "split": "holdout"}
-{"id": 112, "question": "Will I get a paper check before direct deposit is ready?", "route": "answer", "expected": "payroll.md > Direct deposit", "split": "holdout"}
-{"id": 113, "question": "Can I change my tax withholding later?", "route": "answer", "expected": "payroll.md > Tax forms", "split": "holdout"}
-{"id": 114, "question": "Can I work remotely on Mondays?", "route": "answer", "expected": "remote_work.md > Hybrid schedule", "split": "holdout"}
-{"id": 115, "question": "Do new hires have to come in every day at the start?", "route": "answer", "expected": "remote_work.md > First two weeks", "split": "holdout"}
-{"id": 116, "question": "How do I claim the 300 dollar home office money?", "route": "answer", "expected": "remote_work.md > Home office stipend", "split": "holdout"}
-{"id": 117, "question": "I'm a remote hire, when will my laptop ship?", "route": "answer", "expected": "it_equipment.md > Laptop", "split": "holdout"}
-{"id": 118, "question": "My phone was stolen, who do I tell?", "route": "answer", "expected": "it_equipment.md > Lost or stolen equipment", "split": "holdout"}
-{"id": 119, "question": "How long does a software request take to approve?", "route": "answer", "expected": "it_equipment.md > Software requests", "split": "holdout"}
-{"id": 120, "question": "How long is the data privacy course?", "route": "answer", "expected": "training.md > Compliance training", "split": "holdout"}
-{"id": 121, "question": "Do I need a receipt for a 40 dollar lunch expense?", "route": "answer", "expected": "expenses.md > Submitting expenses", "split": "holdout"}
-{"id": 122, "question": "Can I book business class for a 3 hour flight?", "route": "answer", "expected": "expenses.md > Booking travel", "split": "holdout"}
-{"id": 123, "question": "Is retaliation allowed if I report something?", "route": "answer", "expected": "conduct.md > Reporting a concern", "split": "holdout"}
+{"id": 100, "question": "What's the PTO accrual rate each month?", "route": "answer", "expected": "time_off.md > Paid time off accrual", "split": "holdout", "answer_key": [["1.25"]]}
+{"id": 101, "question": "I'm new, can I take a 5 day vacation in my second month?", "route": "answer", "expected": "time_off.md > Using PTO in the first 90 days", "split": "holdout", "answer_key": [["manager approval", "manager's approval", "approval"]]}
+{"id": 102, "question": "How long does my manager take to approve time off?", "route": "answer", "expected": "time_off.md > Requesting time off", "split": "holdout", "answer_key": [["3 business days", "three business days"]]}
+{"id": 103, "question": "Will my leftover PTO expire in December?", "route": "answer", "expected": "time_off.md > Carryover", "split": "holdout", "answer_key": [["5", "five"]]}
+{"id": 104, "question": "Do I need to give notice before using a sick day?", "route": "answer", "expected": "time_off.md > Sick leave", "split": "holdout", "answer_key": [["advance notice", "notice"]]}
+{"id": 105, "question": "Where is the holiday calendar published?", "route": "answer", "expected": "time_off.md > Company holidays", "split": "holdout", "answer_key": [["hr portal"]]}
+{"id": 106, "question": "I missed the 30 day benefits window, what now?", "route": "answer", "expected": "benefits.md > Enrollment deadline", "split": "holdout", "answer_key": [["open enrollment", "qualifying life event"]]}
+{"id": 107, "question": "If I start on the 15th, when does medical coverage begin?", "route": "answer", "expected": "benefits.md > Coverage start date", "split": "holdout", "answer_key": [["first day of the month", "first of the month", "1st of the month", "following month", "month after"]]}
+{"id": 108, "question": "Is there a high deductible plan option?", "route": "answer", "expected": "benefits.md > Medical plans", "split": "holdout", "answer_key": [["hdhp", "high-deductible", "high deductible"]]}
+{"id": 109, "question": "Does the 401(k) match vest right away?", "route": "answer", "expected": "benefits.md > Retirement plan", "split": "holdout", "answer_key": [["immediately", "right away"]]}
+{"id": 110, "question": "I got married, how long do I have to update my benefits?", "route": "answer", "expected": "benefits.md > Qualifying life events", "split": "holdout", "answer_key": [["30 days", "thirty days"]]}
+{"id": 111, "question": "What happens if payday lands on a holiday?", "route": "answer", "expected": "payroll.md > Pay schedule", "split": "holdout", "answer_key": [["previous business day", "business day before", "day before"]]}
+{"id": 112, "question": "Will I get a paper check before direct deposit is ready?", "route": "answer", "expected": "payroll.md > Direct deposit", "split": "holdout", "answer_key": [["paper check"]]}
+{"id": 113, "question": "Can I change my tax withholding later?", "route": "answer", "expected": "payroll.md > Tax forms", "split": "holdout", "answer_key": [["any time", "anytime"]]}
+{"id": 114, "question": "Can I work remotely on Mondays?", "route": "answer", "expected": "remote_work.md > Hybrid schedule", "split": "holdout", "answer_key": [["monday"]]}
+{"id": 115, "question": "Do new hires have to come in every day at the start?", "route": "answer", "expected": "remote_work.md > First two weeks", "split": "holdout", "answer_key": [["every day", "first two weeks", "two weeks"]]}
+{"id": 116, "question": "How do I claim the 300 dollar home office money?", "route": "answer", "expected": "remote_work.md > Home office stipend", "split": "holdout", "answer_key": [["expense system"], ["60 days", "sixty days"]]}
+{"id": 117, "question": "I'm a remote hire, when will my laptop ship?", "route": "answer", "expected": "it_equipment.md > Laptop", "split": "holdout", "answer_key": [["3 business days", "three business days"]]}
+{"id": 118, "question": "My phone was stolen, who do I tell?", "route": "answer", "expected": "it_equipment.md > Lost or stolen equipment", "split": "holdout", "answer_key": [["it help desk", "help desk"]]}
+{"id": 119, "question": "How long does a software request take to approve?", "route": "answer", "expected": "it_equipment.md > Software requests", "split": "holdout", "answer_key": [["2 business days", "two business days"]]}
+{"id": 120, "question": "How long is the data privacy course?", "route": "answer", "expected": "training.md > Compliance training", "split": "holdout", "answer_key": [["45 minutes"]]}
+{"id": 121, "question": "Do I need a receipt for a 40 dollar lunch expense?", "route": "answer", "expected": "expenses.md > Submitting expenses", "split": "holdout", "answer_key": [["25", "itemized receipt", "receipt"]]}
+{"id": 122, "question": "Can I book business class for a 3 hour flight?", "route": "answer", "expected": "expenses.md > Booking travel", "split": "holdout", "answer_key": [["economy"]]}
+{"id": 123, "question": "Is retaliation allowed if I report something?", "route": "answer", "expected": "conduct.md > Reporting a concern", "split": "holdout", "answer_key": [["retaliation", "prohibited", "not allowed"]]}
 {"id": 124, "question": "Someone at work keeps sending me sexual messages", "route": "escalate", "expected": "harassment_or_discrimination", "split": "holdout"}
 {"id": 125, "question": "I have a medical condition and need time for therapy", "route": "escalate", "expected": "medical_or_accommodation", "split": "holdout"}
 {"id": 126, "question": "I'm on OPT, does the company handle my work permit?", "route": "escalate", "expected": "immigration_or_visa", "split": "holdout"}

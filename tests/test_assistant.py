@@ -50,3 +50,19 @@ def test_quality_floor_on_dev_set():
     assert m["escalation_recall_%"] == 100.0
     assert m["false_escalations"] == 0
     assert m["end_to_end_correct_%"] >= 85.0
+
+
+def test_generation_eval_checks_facts_and_numbers():
+    from eval.run_generation_eval import has_facts, unsupported_numbers
+
+    assert has_facts("You get 15 days of PTO.", [["15 days", "fifteen"]])
+    assert not has_facts("You get PTO.", [["15 days"]])
+    assert unsupported_numbers("You get 20 days.", "You accrue 15 days.", "How many?") == ["20"]
+
+
+def test_extractive_answers_are_correct_when_retrieval_is_right():
+    from eval.run_generation_eval import evaluate
+
+    summary, _ = evaluate("dev", BOT)
+    assert summary["correct_given_hit_%"] == 100.0
+    assert summary["unsupported_number_%"] == 0.0
